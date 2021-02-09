@@ -33,7 +33,7 @@ export const PagingSize = (
 					key={i}
 					toolTip={toolTip(x)}
 					disabled={x === p.perPage}
-					onClick={() => p.setPerPage(api, true, x)}
+					onClick={() => p.setPerPage(api, x)}
 				>
 					{x}
 				</Button>

@@ -40,7 +40,6 @@ export interface IViewState extends
 	) => void,
 	setPerPage: (
 		api: abstractTrendingApi,
-		forceUpdate: boolean,
 		perPage: number,
 	) => void,
 	setIndex: (
@@ -139,14 +138,11 @@ export class viewState
 	@action
 	setPerPage(
 		api: abstractTrendingApi,
-		forceUpdate: boolean,
 		perPage: number,
 	) {
+		this.index = 1;
 		this.perPage = perPage;
 		this.persist();
-		if (!forceUpdate) {
-			return;
-		}
 		api.getPageAsync();
 	}
 	@action
