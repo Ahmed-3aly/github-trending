@@ -1,0 +1,39 @@
+
+:root {
+    --color-background: rgb(5, 5, 60);
+    --color-foreground: rgb(255, 255, 255);
+    --color-accent: rgb(0, 195, 185);
+    --color-shadow: rgb(0, 0, 0);
+    --color-semi-background: rgba(255, 255, 255, 10%);
+    --color-semi-accent: rgba(0, 195, 185, 30%);
+    --color-ajax-p-back: rgb(0, 195, 185);
+    --color-ajax-p-fore: rgb(5, 5, 60);
+    --color-ajax-s-back: yellowgreen;
+    --color-ajax-s-fore: darkgreen;
+    --color-ajax-e-back: tomato;
+    --color-ajax-e-fore: maroon;
+}
+
+html,
+body
+{
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--color-background);
+}
+
+div
+{
+    color: var(--color-foreground);
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--color-foreground);
+}
+
+.Overlay
+{
+    font-family: 'Font Awesome 5 Free';
+}

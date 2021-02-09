@@ -1,0 +1,90 @@
+
+.view
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.viewName,
+.statsName
+{
+    font-size: large;
+}
+
+.viewDesc,
+.statsDesc
+{
+    font-size: smaller;
+}
+
+/* */
+.list > *
+{
+    padding: 10px 0 10px 10px;
+    display: grid;
+    grid-template-columns: 90px 10px 1fr;
+    grid-template-rows: Auto Auto Auto;
+    grid-template-areas:
+        'A . B'
+        'A . C'
+        'A . D';
+    border-bottom: 1px solid var(--color-background);
+}
+
+.list > *:nth-child(even)
+{
+    background: var(--color-semi-accent);
+}
+.list > *:nth-child(odd)
+{
+    background: var(--color-semi-background);
+}
+
+.list > * div
+{
+    font-family: 'Garamond';
+}
+
+.list > * > *:nth-child(1)
+{
+    grid-area: A;
+}
+.list > * > *:nth-child(2)
+{
+    grid-area: B;
+}
+.list > * > *:nth-child(3)
+{
+    grid-area: C;
+}
+.list > * > *:nth-child(4)
+{
+    grid-area: D;
+}
+
+/* */
+.stats
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.statsLabel
+{
+    margin-right: 10px;
+    padding: 4px 10px 4px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.statsLabel > *:not(:last-child),
+.statsDesc
+{
+    margin-right: 5px;
+}

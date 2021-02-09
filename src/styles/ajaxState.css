@@ -1,0 +1,91 @@
+
+.ajaxStateRoot
+{
+    opacity: 0.5;
+    z-index: 998;
+}
+.ajaxStateRoot.hidden
+{
+    visibility: hidden;
+}
+
+.ajaxStateRoot > *
+{
+    z-index: 999;
+}
+.ajaxStateRoot .blur
+{
+    opacity: 0.75;
+}
+
+.ajaxStateRoot:not(.hidden) .blur
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ajaxState
+{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 14px 20px 14px 20px;
+    border-radius: 3px;
+}
+
+.ajaxState > *:first-child
+{
+    text-transform: uppercase;
+}
+
+/* colors */
+.ajaxStateRoot.error .blur
+{
+    background: var(--color-ajax-e-back);
+}
+.ajaxStateRoot.progress .blur
+{
+    background: var(--color-ajax-p-back);
+}
+.ajaxStateRoot.success .blur
+{
+    background: var(--color-ajax-s-back);
+}
+
+.ajaxState.error
+{
+    background: var(--color-ajax-e-back);
+    border: 3px solid var(--color-ajax-e-fore);
+    box-shadow: inset 0 0 6px var(--color-ajax-e-fore);
+}
+.ajaxState.progress
+{
+    background: var(--color-ajax-p-back);
+    border: 3px solid var(--color-ajax-p-fore);
+    box-shadow: inset 0 0 6px var(--color-ajax-p-fore);
+}
+.ajaxState.success
+{
+    background: var(--color-ajax-s-back);
+    border: 3px solid var(--color-ajax-s-fore);
+    box-shadow: inset 0 0 6px var(--color-ajax-s-fore);
+}
+
+.ajaxState.error > *
+{
+    color: var(--color-ajax-e-fore);
+}
+.ajaxState.progress > *
+{
+    color: var(--color-ajax-p-fore);
+}
+.ajaxState.success > *
+{
+    color: var(--color-ajax-s-fore);
+}
